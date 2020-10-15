@@ -71,6 +71,8 @@ button.delete {
   color: white;
 }
 
+/*When user navigate from hero-detail beck to hero list
+  the item shows selected*/
 .heroes li.selected {
   background-color: #CFD8DC;
   color: white;

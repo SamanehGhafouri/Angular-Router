@@ -13,6 +13,7 @@ import {FormsModule} from '@angular/forms';
 import {HeroService} from './heroes/hero.service';
 import {MessageService} from './message.service';
 import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     HeroesModule,
     AppRoutingModule,
+    BrowserAnimationsModule
 
   ],
   providers: [HeroService, MessageService],

@@ -2,7 +2,7 @@
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 import { HeroService } from '../hero.service';
 import { Hero } from '../hero';

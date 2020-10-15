@@ -14,6 +14,7 @@ import {HeroService} from './heroes/hero.service';
 import {MessageService} from './message.service';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CrisisDetailComponent } from './crisis-center/crisis-detail/crisis-detail.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppComponent,
     CrisisListComponent,
     PageNotFoundComponent,
+    CrisisDetailComponent,
   ],
   imports: [
     BrowserModule,

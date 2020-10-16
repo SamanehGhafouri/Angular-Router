@@ -12,6 +12,7 @@ import {MessageService} from './message.service';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CrisisCenterModule} from './crisis-center/crisis-center.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 
 
@@ -19,6 +20,7 @@ import {CrisisCenterModule} from './crisis-center/crisis-center.module';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    ComposeMessageComponent,
   ],
   imports: [
     BrowserModule,

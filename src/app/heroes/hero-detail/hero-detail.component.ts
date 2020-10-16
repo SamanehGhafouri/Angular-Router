@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { HeroService } from '../hero.service';
-import { Hero } from '../hero';
+import { Crisis } from '../crisis';
 
 @Component({
   selector: 'app-hero-detail',
@@ -12,7 +12,7 @@ import { Hero } from '../hero';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  hero$: Observable<Hero>;
+  hero$: Observable<Crisis>;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,7 +27,7 @@ export class HeroDetailComponent implements OnInit {
     );
   }
 
-  gotoHeroes(hero: Hero) {
+  gotoHeroes(hero: Crisis) {
     const heroId = hero ? hero.id : null;
     // Pass along the hero id if available
     // so that the HeroList component can select that hero.

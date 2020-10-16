@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 import { HeroService } from '../hero.service';
-import { Hero } from '../hero';
+import { Crisis } from '../crisis';
 
 @Component({
   selector: 'app-hero-list',
@@ -13,7 +13,7 @@ import { Hero } from '../hero';
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent implements OnInit {
-  heroes$: Observable<Hero[]>;
+  heroes$: Observable<Crisis[]>;
   selectedId: number;
 
   constructor(

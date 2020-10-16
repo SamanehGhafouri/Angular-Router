@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Hero } from './hero';
+import { Crisis } from './crisis';
 import { HEROES } from './mock-heroes';
 import { MessageService } from '../message.service';
 
@@ -14,7 +14,7 @@ export class HeroService {
 
   constructor(private messageService: MessageService) { }
 
-  getHeroes(): Observable<Hero[]> {
+  getHeroes(): Observable<Crisis[]> {
     // TODO: send the message _after_ fetching the heroes
     this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
@@ -23,7 +23,7 @@ export class HeroService {
   getHero(id: number | string) {
     return this.getHeroes().pipe(
       // (+) before `id` turns the string into a number
-      map((heroes: Hero[]) => heroes.find(hero => hero.id === +id))
+      map((heroes: Crisis[]) => heroes.find(hero => hero.id === +id))
     );
   }
 }

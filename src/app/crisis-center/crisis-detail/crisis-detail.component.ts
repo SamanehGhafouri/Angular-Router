@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Hero} from '../../heroes/hero';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {switchMap} from 'rxjs/operators';
-import {CrisisService} from '../crisis.service';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Crisis} from '../crisis';
 import {DialogService} from '../dialog.service';
 
@@ -25,7 +22,7 @@ export class CrisisDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe((data: {crisis: Crisis}) => {
-      this.editName = data.crisis.name;
+      // this.editName = data.crisis.name;
       this.crisis = data.crisis;
     });
   }

@@ -7,13 +7,26 @@ import {CrisisCenterHomeComponent} from './crisis-center-home/crisis-center-home
 
 
 const routes: Routes = [
-  {path: 'crisis-center', component: CrisisCenterComponent,
+  {
+    path: 'crisis-center',
+    component: CrisisCenterComponent,
     children: [
-      {path: '', component: CrisisListComponent,
-      children: [
-        {path: ':id', component: CrisisDetailComponent}, {path: '', component: CrisisCenterHomeComponent}
-      ]}
-    ]}
+      {
+        path: '',
+        component: CrisisListComponent,
+        children: [
+          {
+            path: ':id',
+            component: CrisisDetailComponent,
+          },
+          {
+            path: '',
+            component: CrisisCenterHomeComponent
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 @NgModule({

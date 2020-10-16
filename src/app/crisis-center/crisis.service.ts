@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Crisis } from './Crisis';
 import { CRISES } from './mock-crises';
 import {MessageService} from './message.service';
+import {Crisis} from './crisis';
 
 
 @Injectable({
@@ -26,4 +26,3 @@ export class CrisisService {
     );
   }
 }
-

@@ -1,5 +1,5 @@
 
-export interface Crisis {
+export interface Hero {
   id: number;
   name: string;
 }

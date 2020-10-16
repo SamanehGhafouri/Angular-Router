@@ -1,2 +1,11 @@
-<h3>CRISIS CENTER</h3>
-<P>Get your crisis here</P>
+<h2>CRISES</h2>
+<ul class="crises">
+  <li *ngFor="let crisis of crises$ | async"
+      [class.selected]="crisis.id === selectedId">
+    <a [routerLink]="[':id', crisis.id]">
+      <span class="badge">{{ crisis.id }}</span>{{ crisis.name }}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/sidekicks">Go to sidekicks</button>

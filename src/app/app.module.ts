@@ -27,11 +27,12 @@ import {AdminModule} from './admin/admin.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AdminModule,
+    CrisisCenterModule,
     HeroesModule,
     BrowserAnimationsModule,
-    CrisisCenterModule,
     AppRoutingModule,
-    AdminModule
+
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]

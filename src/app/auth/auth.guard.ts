@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, UrlTree} from '@angular/router';
+import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, UrlTree, NavigationExtras} from '@angular/router';
 import {AuthService} from './auth.service';
 
 @Injectable({
@@ -17,10 +17,18 @@ export class AuthGuard implements CanActivate {
     return this.canActivate(route, state);
   }
   checkLogin(url: string): true|UrlTree{
-    if (this.authService.isLoggedIn){return true;}
+    if (this.authService.isLoggedIn){return true; }
     // Store the attempted URL for redirecting
     this.authService.redirectUrl = url;
+    // Create a dummy session id
+    const sessionId = 123456789;
+    // Set our navigation extras object
+    // that contains our global query params and fragment
+    const navigationExtras: NavigationExtras = {
+      queryParams: { session_id: sessionId },
+      fragment: 'anchor'
+    };
     // Redirect to the login page
-    return this.router.parseUrl('/login');
+    return this.router.createUrlTree(['/login'], navigationExtras);
   }
 }

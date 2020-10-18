@@ -13,6 +13,7 @@ import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import {AdminModule} from './admin/admin.module';
 import {AuthModule} from './auth/auth.module';
+import {DialogService} from './dialog.service';
 
 
 
@@ -35,7 +36,7 @@ import {AuthModule} from './auth/auth.module';
     AppRoutingModule,
 
   ],
-  providers: [HeroService, MessageService],
+  providers: [HeroService, MessageService, DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,7 +9,7 @@ import {CrisisService} from './crisis.service';
 import {MessageService} from './message.service';
 import {CrisisDetailComponent} from './crisis-detail/crisis-detail.component';
 import {FormsModule} from '@angular/forms';
-import {DialogService} from './dialog.service';
+
 
 
 @NgModule({
@@ -19,6 +19,6 @@ import {DialogService} from './dialog.service';
     FormsModule,
     CrisisCenterRoutingModule
   ],
-  providers: [CrisisService, MessageService, DialogService]
+  providers: [CrisisService, MessageService]
 })
 export class CrisisCenterModule { }

@@ -9,7 +9,6 @@ import {HeroService} from './heroes/hero.service';
 import {MessageService} from './message.service';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import {AuthModule} from './auth/auth.module';
 import {DialogService} from './dialog.service';
@@ -29,7 +28,6 @@ import {DialogService} from './dialog.service';
     FormsModule,
     HeroesModule,
     HttpClientModule,
-    CrisisCenterModule,
     AuthModule,
     AppRoutingModule,
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../auth.service';
-import {Router} from '@angular/router';
+import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +17,12 @@ export class LoginComponent{
     this.message = 'Logged' + (this.authService.isLoggedIn ? 'in' : 'out');
   }
   login(){
+    // Set our navigation extras object
+    // that passes on our global query params and fragment
+    const navigationExtras: NavigationExtras = {
+      queryParamsHandling: 'preserve',
+      preserveFragment: true
+    };
     this.message = 'Trying to log in ...';
     this.authService.login().subscribe(() => {
       this.setMessage();
@@ -25,7 +31,7 @@ export class LoginComponent{
         // However to keep the example simple, we will always redirect to '/admin'.
         const redirectUrl = '/admin';
         // Redirect the user
-        this.router.navigate([redirectUrl]);
+        this.router.navigate([redirectUrl], navigationExtras);
       }
     });
   }

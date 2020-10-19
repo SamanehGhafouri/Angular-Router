@@ -15,7 +15,6 @@ import {DialogService} from './dialog.service';
 import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,4 +35,4 @@ import {SelectivePreloadingStrategyService} from './selective-preloading-strateg
   providers: [HeroService, MessageService, DialogService, SelectivePreloadingStrategyService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

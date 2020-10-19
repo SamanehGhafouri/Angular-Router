@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   {path: 'crisis-center', loadChildren: () => import('./crisis-center/crisis-center.module').then(m => m.CrisisCenterModule),
     data: { preload: true}},
-  {path: '', redirectTo: '/heroes', pathMatch: 'full'},
+  {path: '', redirectTo: '/superheroes', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
 

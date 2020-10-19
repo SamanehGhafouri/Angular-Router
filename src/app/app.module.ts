@@ -11,7 +11,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import {AdminModule} from './admin/admin.module';
 import {AuthModule} from './auth/auth.module';
 import {DialogService} from './dialog.service';
 
@@ -32,7 +31,6 @@ import {DialogService} from './dialog.service';
     HttpClientModule,
     CrisisCenterModule,
     AuthModule,
-    AdminModule,
     AppRoutingModule,
 
   ],

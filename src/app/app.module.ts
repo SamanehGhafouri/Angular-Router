@@ -13,6 +13,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import {AuthModule} from './auth/auth.module';
 import {DialogService} from './dialog.service';
 import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
+import {Router} from '@angular/router';
 
 
 @NgModule({
@@ -35,4 +36,11 @@ import {SelectivePreloadingStrategyService} from './selective-preloading-strateg
   providers: [HeroService, MessageService, DialogService, SelectivePreloadingStrategyService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  // Diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    const replacer = (key, value) => (typeof value === 'function') ? value.name:
+      value;
+    console.log('Routes: ', JSON.stringify(router.config, replacer, 2));
+  }
+}

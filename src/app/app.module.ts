@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import {AuthModule} from './auth/auth.module';
 import {DialogService} from './dialog.service';
+import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
 
 
 
@@ -32,7 +33,7 @@ import {DialogService} from './dialog.service';
     AppRoutingModule,
 
   ],
-  providers: [HeroService, MessageService, DialogService],
+  providers: [HeroService, MessageService, DialogService, SelectivePreloadingStrategyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
